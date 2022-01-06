@@ -1,0 +1,6 @@
+# pip install yellowbrick
+def feature_importances(model,X_train, y_train):
+    from yellowbrick.model_selection import FeatureImportances
+    visualizer = FeatureImportances(model)
+    visualizer.fit(X_train, y_train)
+    return visualizer.show()
